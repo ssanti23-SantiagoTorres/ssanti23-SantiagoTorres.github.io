@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EAEAEA;
+  color: #555555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#banner {
+  background-color: #037A50;
+}
+
+header {
+  background-color: #037A50; 
+  color: white;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.5em;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.25em;
+}
+
+nav {
+  background-color: #085373;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 1.5px solid white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 0.5em;
+}
+
+nav a:hover {
+  background-color: #FFFFFF;
+  color: #085373;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "description search"
+    "main-images social"
+    "favorites newsletter"
+    "favorites comments";
+  gap: 1em;
+  padding: 1em;
+  background-color: white;
+}
+
+.description {
+  grid-area: description;
+  background-color: #B66205;
+  color: white;
+  padding: 1em;
+}
+
+.search {
+  grid-area: search;
+  background-color: #085373;
+  color: white;
+  padding: 1em;
+}
+
+.main-images {
+  grid-area: main-images;
+  padding: 1em;
+  background-color: white;
+}
+
+.social {
+  grid-area: social;
+  background-color: #B66205; 
+  color: white;
+  padding: 1em;
+}
+
+.favorites {
+  grid-area: favorites;
+  padding: 1em;
+  background-color: white;
+}
+
+.newsletter {
+  grid-area: newsletter;
+  background-color: #B66205; 
+  color: white;
+  padding: 1em;
+}
+
+.comments {
+  grid-area: comments;
+  padding: 1em;
+  background-color: white;
+}
+
+.image-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 30%;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin-bottom: 0.5em;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 1.5em;
+  background-color: #B63E05;
+  color: white;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "description"
+      "search"
+      "main-images"
+      "social"
+      "favorites"
+      "newsletter"
+      "comments";
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav li {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  #banner {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #002171;
+    box-shadow: 3px 3px 3px #002171;
+  }
+}
