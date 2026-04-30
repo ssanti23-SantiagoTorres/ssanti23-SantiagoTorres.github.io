@@ -117,6 +117,11 @@ nav a:hover {
   background-color: white;
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
 .image-grid {
   display: flex;
   gap: 10px;
